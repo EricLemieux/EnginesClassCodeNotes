@@ -25,5 +25,18 @@ int main()
 	B* b = new A;	//Error, cant do this
 	*/
 
+	/*
+	//Builds but crashes
+	char *str = "Foo";
+	*str = 'b';
+	*/
+	
+	//c goes out of scope and p is then pointing into memory
+	char *p = 0;
+	{
+		char c;
+		p = &c;
+	}
+
 	return 0;
 }
